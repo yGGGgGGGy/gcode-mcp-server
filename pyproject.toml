@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gcode-mcp-server"
+version = "0.1.0"
+description = "Gcode MCP Server — 麒麟OS智能运维Agent执行层"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "psutil>=5.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
